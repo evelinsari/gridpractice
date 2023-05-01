@@ -32,40 +32,58 @@ img, picture, svg, video {
 /* --- Variables --- */
 .container {
 display: grid;
+justify-content: center;
+align-content: center;
 height: 100vh;
-padding: 15% 30%;
-grid-template-columns: 1fr 1fr 1fr 1fr 1fr ;
-grid-template-rows:  1fr 1fr 1fr;
+width: auto;
+grid-template-columns: 100px 100px 100px 100px 100px ;
+grid-template-rows:  100px 100px 100px;
 
 grid-template-areas: 
-"apple apple apple orange orange"
-"pineapple pineapple pineapple orange orange"
+"apple apple apple lemon lemon"
+"pineapple pineapple pineapple lemon lemon"
 "pear . tomato tomato tomato"
 }
 
 #apple{
     background-color: chartreuse;
     grid-area: apple;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
 }
 
-#orange{
+#lemon{
     background-color: orange;
-    grid-area: orange;
+    grid-area: lemon;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #pineapple{
     background-color: yellow;
     grid-area: pineapple;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #pear{
 background-color: burlywood;
 grid-area: pear;
+display: flex;
+align-items: center;
+justify-content: center;
 }
 
 #tomato{
 background-color: red;
 grid-area: tomato;
+display: flex;
+align-items: center;
+justify-content: center;
 }
 
 @media only screen and (max-width: 550px) {
@@ -75,7 +93,7 @@ grid-area: tomato;
         grid-template-rows:  repeat(5, 1fr);
         grid-template-areas: 
         "apple"
-        "orange"
+        "lemon"
         "pineapple"
         "pear"
         "tomato"
